@@ -7,6 +7,10 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgLoopFunctionsMessages = array();
 $wgLoopFunctionsMagic = array();
 
+$wgLoopFunctionsMessages['fr'] = array(
+	'loopfunc_max_loops' => "Nombre maximal de boucles atteint",
+);
+
 $wgLoopFunctionsMessages['cs'] = array(
 	'loopfunc_max_loops' => "Byl přesažen maximální povolený počet smyček",
 );
@@ -19,3 +23,4 @@ $wgLoopFunctionsMagic['en'] = array(
 	'for' => array( 0, 'for' ),
 	'foreach' => array( 0, 'foreach' ),
 );
+?>
