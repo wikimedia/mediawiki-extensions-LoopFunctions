@@ -21,7 +21,7 @@ require_once('LoopFunctions.i18n.php');
 
 $wgHooks['ParserFirstCallInit'][] = "ExtLoopFunctions::setup";
 $wgExtensionCredits['parserhook'][] = array(
-	'version' => '1.0.4',
+	'version' => '1.0.5',
 	'description' => 'Provides limited looping functionallity in the wikitext',
 	'name' => 'LoopFunctions',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:LoopFunctions',
@@ -82,7 +82,7 @@ class ExtLoopFunctions {
 		$mask = isset($args[0]) ? trim($frame->expand($args[0])) : '' ;
 		$text = isset($args[1]) ? trim($frame->expand($args[1])) : '' ;
 		$param = isset($args[2]) ? trim($frame->expand($args[2])) : '$n$' ;
-		$variables = $frame->namedArgs ;
+		$variables = $frame->namedArgs + $frame->numberedArgs ;
 		list ($prefix , $suffix) = $param == '' ? array($mask , '') : explode($param , $mask , 2) ;
 		$return = '';
 
