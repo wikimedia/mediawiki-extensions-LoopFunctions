@@ -9,7 +9,7 @@
  * @link http://www.mediawiki.org/wiki/Extension:LoopFunctions Documentation
  *
  * @author Carl Fürstenberg (AzaToth) <azatoth@gmail.com>
- * @copyright Copyright © 2006 Carl Fürstenberg
+ * @copyright Copyright © 2006 Carl Fürstenberg, © 2008, 2012 Matteo Cypriani
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
@@ -17,45 +17,30 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This file is a MediaWiki extension, it is not a valid entry point' );
 }
 
-require_once('LoopFunctions.i18n.php');
-
-$wgHooks['ParserFirstCallInit'][] = "ExtLoopFunctions::setup";
 $wgExtensionCredits['parserhook'][] = array(
-	'version' => '1.0.5',
-	'description' => 'Provides limited looping functionallity in the wikitext',
+	'path' => __FILE__,
+	'version' => '1.0.6',
+	'descriptionmsg' => 'loopfunc_description',
 	'name' => 'LoopFunctions',
 	'url' => 'http://www.mediawiki.org/wiki/Extension:LoopFunctions',
-	'author' => 'Carl Fürstenberg (AzaToth), adapted to MediaWiki 1.12 by Xiloynaha'
+	'author' => array('Carl Fürstenberg (AzaToth)', 'Matteo Cypriani (Xiloynaha)'),
 );
 
-$wgHooks['LanguageGetMagic'][]  = 'ExtLoopFunctions::languageGetMagic';
+$wgExtensionMessagesFiles['LoopFunctions'] = dirname( __FILE__ ) . '/LoopFunctions.i18n.php';
+$wgExtensionMessagesFiles['LoopFunctionsMagic'] = dirname( __FILE__ ) . '/LoopFunctions.i18n.magic.php';
+
+$wgHooks['ParserFirstCallInit'][] = "ExtLoopFunctions::setup";
 
 class ExtLoopFunctions {
 	public static $mMaxLoopCount = 100; // Maximum number of loops allowed per session
 	private static $mCurrentLoopCount = 0; // number of executed loops this session
 
 	public static function setup(&$parser) {
-		global $wgParser, $wgExtLoopFunctions, $wgLoopFunctionsMessages, $wgMessageCache;
+		global $wgParser, $wgExtLoopFunctions ;
 
 		$wgExtLoopFunctions = new ExtLoopFunctions();
 		$wgParser->setFunctionHook( 'for', array(&$wgExtLoopFunctions, 'forHook'), SFH_OBJECT_ARGS) ;
 		$wgParser->setFunctionHook('foreach', array(__CLASS__, 'foreachHook'), SFH_OBJECT_ARGS) ;
-
-		foreach( $wgLoopFunctionsMessages as $key => $value ) {
-			$wgMessageCache->addMessages( $value, $key );
-		}
-
-		return true ;
-	}
-
-	public static function languageGetMagic( &$magicWords, $langCode ) {
-		global $wgLoopFunctionsMagic;
-
-		if (!in_array($langCode, $wgLoopFunctionsMagic)) {
-			$langCode = 'en';
-		}
-
-		$magicWords = array_merge($magicWords, $wgLoopFunctionsMagic[$langCode]);
 
 		return true ;
 	}
@@ -69,7 +54,7 @@ class ExtLoopFunctions {
 
 		for ($i = 0 ; $i < $nbr_of_loops ; ++$i) {
 			if( ++self :: $mCurrentLoopCount > self :: $mMaxLoopCount ) {
-				return wfMsg( 'loopfunc_max_loops' );
+				return wfMessage('loopfunc_max_loops') ;
 			}
 
 			$return .= strtr( $text , array( $param => $i + 1 ) );
@@ -88,7 +73,7 @@ class ExtLoopFunctions {
 
 		for ($i = 0 ; array_key_exists($prefix . ($i + 1) . $suffix , $variables) ; ++$i) {
 			if (++self::$mCurrentLoopCount > self::$mMaxLoopCount) {
-				return wfMsg('loopfunc_max_loops') ;
+				return wfMessage('loopfunc_max_loops') ;
 			}
 
 			$return .= strtr($text , array($param => $i + 1)) ;
@@ -98,5 +83,3 @@ class ExtLoopFunctions {
 	}
 
 }
-
-?>

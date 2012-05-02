@@ -4,23 +4,18 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This file is a MediaWiki extension, it is not a valid entry point' );
 }
 
-$wgLoopFunctionsMessages = array();
-$wgLoopFunctionsMagic = array();
+$messages = array();
 
-$wgLoopFunctionsMessages['fr'] = array(
-	'loopfunc_max_loops' => "Nombre maximal de boucles atteint",
-);
-
-$wgLoopFunctionsMessages['cs'] = array(
+$messages['cs'] = array(
 	'loopfunc_max_loops' => "Byl přesažen maximální povolený počet smyček",
 );
 
-$wgLoopFunctionsMessages['en'] = array(
+$messages['en'] = array(
+	'loopfunc_description' => 'Provides limited looping functionallity in the wikitext',
 	'loopfunc_max_loops' => "Maximum number of allowed loops reached",
 );
 
-$wgLoopFunctionsMagic['en'] = array(
-	'for' => array( 0, 'for' ),
-	'foreach' => array( 0, 'foreach' ),
+$messages['fr'] = array(
+	'loopfunc_description' => 'Fournit quelques fonctionalités de boucles',
+	'loopfunc_max_loops' => "Nombre maximal de boucles atteint",
 );
-?>
