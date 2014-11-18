@@ -39,8 +39,8 @@ class ExtLoopFunctions {
 		global $wgParser, $wgExtLoopFunctions ;
 
 		$wgExtLoopFunctions = new ExtLoopFunctions();
-		$wgParser->setFunctionHook( 'for', array(&$wgExtLoopFunctions, 'forHook'), SFH_OBJECT_ARGS) ;
-		$wgParser->setFunctionHook('foreach', array(__CLASS__, 'foreachHook'), SFH_OBJECT_ARGS) ;
+		$wgParser->setFunctionHook( 'for', array(&$wgExtLoopFunctions, 'forHook'), Parser::SFH_OBJECT_ARGS) ;
+		$wgParser->setFunctionHook('foreach', array(__CLASS__, 'foreachHook'), Parser::SFH_OBJECT_ARGS) ;
 
 		return true ;
 	}
