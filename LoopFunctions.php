@@ -22,12 +22,12 @@ $wgExtensionCredits['parserhook'][] = array(
 	'version' => '1.0.6',
 	'descriptionmsg' => 'loopfunc_description',
 	'name' => 'LoopFunctions',
-	'url' => 'http://www.mediawiki.org/wiki/Extension:LoopFunctions',
+	'url' => 'https://www.mediawiki.org/wiki/Extension:LoopFunctions',
 	'author' => array('Carl Fürstenberg (AzaToth)', 'Matteo Cypriani (Xiloynaha)'),
 );
 
-$wgExtensionMessagesFiles['LoopFunctions'] = dirname( __FILE__ ) . '/LoopFunctions.i18n.php';
-$wgExtensionMessagesFiles['LoopFunctionsMagic'] = dirname( __FILE__ ) . '/LoopFunctions.i18n.magic.php';
+$wgMessagesDirs['LoopFunctions'] = __DIR__ . '/i18n';
+$wgExtensionMessagesFiles['LoopFunctionsMagic'] = __DIR__ . '/LoopFunctions.i18n.magic.php';
 
 $wgHooks['ParserFirstCallInit'][] = "ExtLoopFunctions::setup";
 
