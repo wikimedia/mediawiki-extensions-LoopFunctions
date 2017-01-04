@@ -3,5 +3,5 @@
 		"authors": []
 	},
 	"loopfunc_description": "{{desc|what=extension|name=LoopFunctions|url=https://www.mediawiki.org/wiki/Extension:LoopFunctions}}",
-	"loopfunc_max_loops": ""
+	"loopfunc_max_loops": "Error message returned as wikitext of a parser function when the maximal number of loops is reached"
 }
