@@ -2,6 +2,6 @@
 	"@metadata": {
 		"authors": []
 	},
-	"loopfunc_description": "Provides limited looping functionallity in the wikitext",
+	"loopfunc-desc": "Provides limited looping functionallity in the wikitext",
 	"loopfunc_max_loops": "Maximum number of allowed loops reached"
 }

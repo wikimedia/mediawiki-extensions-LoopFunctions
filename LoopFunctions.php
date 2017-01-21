@@ -20,7 +20,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'version' => '1.0.6',
-	'descriptionmsg' => 'loopfunc_description',
+	'descriptionmsg' => 'loopfunc-desc',
 	'name' => 'LoopFunctions',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:LoopFunctions',
 	'author' => array('Carl Fürstenberg (AzaToth)', 'Matteo Cypriani (Xiloynaha)'),

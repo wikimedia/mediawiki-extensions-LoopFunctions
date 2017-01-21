@@ -2,6 +2,6 @@
 	"@metadata": {
 		"authors": []
 	},
-	"loopfunc_description": "Fournit quelques fonctionalités de boucles",
+	"loopfunc-desc": "Fournit quelques fonctionalités de boucles",
 	"loopfunc_max_loops": "Nombre maximal de boucles atteint"
 }
