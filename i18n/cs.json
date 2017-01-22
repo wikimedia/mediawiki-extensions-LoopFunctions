@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Danny B."
+		]
 	},
-	"loopfunc_max_loops": "Byl přesažen maximální povolený počet smyček"
+	"loopfunc_max_loops": "Byl přesažen maximální povolený počet cyklů"
 }
