@@ -5,5 +5,5 @@
 		]
 	},
 	"loopfunc-desc": "Bietet eine beschränkte Schleifenfunktionalität im Wikitext",
-	"loopfunc_max_loops": "Erlaubte maximale Anzahl erreichter Schleifen"
+	"loopfunc_max_loops": "Es wurde die maximal erlaubte Anzahl an Schleifen erreicht"
 }
