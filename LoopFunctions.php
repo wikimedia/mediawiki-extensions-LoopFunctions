@@ -6,7 +6,7 @@
  * @package MediaWiki
  * @subpackage Extensions
  *
- * @link http://www.mediawiki.org/wiki/Extension:LoopFunctions Documentation
+ * @link https://www.mediawiki.org/wiki/Extension:LoopFunctions Documentation
  *
  * @author Carl Fürstenberg (AzaToth) <azatoth@gmail.com>
  * @copyright Copyright © 2006 Carl Fürstenberg, © 2008, 2012 Matteo Cypriani
