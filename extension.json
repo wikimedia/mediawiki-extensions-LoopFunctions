@@ -18,7 +18,7 @@
 		"LoopFunctionsMagic": "LoopFunctions.i18n.magic.php"
 	},
 	"AutoloadClasses": {
-		"ExtLoopFunctions": "LoopFunctions.body.php"
+		"ExtLoopFunctions": "ExtLoopFunctions.php"
 	},
 	"Hooks": {
 		"ParserFirstCallInit": "ExtLoopFunctions::setup"
