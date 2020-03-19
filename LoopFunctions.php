@@ -1,7 +1,8 @@
 <?php
 /**
  * Some functions to enable limited looping functionallity,
- * will also replace the text '$n$' or given parameter in the given text to the current loop count plus one.
+ * will also replace the text '$n$' or given parameter in the
+ * given text to the current loop count plus one.
  *
  * @package MediaWiki
  * @subpackage Extensions
@@ -10,7 +11,7 @@
  *
  * @author Carl Fürstenberg (AzaToth) <azatoth@gmail.com>
  * @copyright Copyright © 2006 Carl Fürstenberg, © 2008, 2012 Matteo Cypriani
- * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
+ * @license GPL-2.0-or-later
  */
 
 if ( function_exists( 'wfLoadExtension' ) ) {

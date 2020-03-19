@@ -1,8 +1,8 @@
 <?php
 
-$magicWords = array();
+$magicWords = [];
 
-$magicWords['en'] = array(
-	'for' => array( 0, 'for' ),
-	'foreach' => array( 0, 'foreach' ),
-);
+$magicWords['en'] = [
+	'for' => [ 0, 'for' ],
+	'foreach' => [ 0, 'foreach' ],
+];
