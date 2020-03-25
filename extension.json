@@ -14,6 +14,10 @@
 			"i18n"
 		]
 	},
+	"requires":
+	{
+		"MediaWiki": ">= 1.35.0"
+	},
 	"ExtensionMessagesFiles": {
 		"LoopFunctionsMagic": "LoopFunctions.i18n.magic.php"
 	},
