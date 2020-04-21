@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\MediaWikiServices;
-
 class ExtLoopFunctions {
 	public static $mMaxLoopCount = 100; // Maximum number of loops allowed per session
 	private static $mCurrentLoopCount = 0; // number of executed loops this session
@@ -13,7 +11,6 @@ class ExtLoopFunctions {
 		global $wgExtLoopFunctions;
 		$wgExtLoopFunctions = new ExtLoopFunctions();
 
-		$parser = MediaWikiServices::getInstance()->getParser();
 		$parser->setFunctionHook( 'for', [ &$wgExtLoopFunctions, 'forHook' ], Parser::SFH_OBJECT_ARGS );
 		$parser->setFunctionHook( 'foreach', [ __CLASS__, 'foreachHook' ], Parser::SFH_OBJECT_ARGS );
 	}
