@@ -14,8 +14,7 @@
 			"i18n"
 		]
 	},
-	"requires":
-	{
+	"requires": {
 		"MediaWiki": ">= 1.35.0"
 	},
 	"ExtensionMessagesFiles": {
