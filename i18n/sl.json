@@ -4,5 +4,6 @@
 			"Eleassar"
 		]
 	},
-	"loopfunc-desc": "Zagotavlja omejeno funkcionalnost zanke v vikibesedilu"
+	"loopfunc-desc": "Zagotavlja omejeno funkcionalnost zanke v vikibesedilu",
+	"loopfunc_max_loops": "Doseženo je bilo največje število dovoljenih zank"
 }
