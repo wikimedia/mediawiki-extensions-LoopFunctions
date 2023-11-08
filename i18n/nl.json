@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"loopfunc-desc": "Biedt beperkte functionaliteit voor lussen in de wikitekst",
+	"loopfunc_max_loops": "Maximaal aantal toegestane lussen bereikt"
+}
