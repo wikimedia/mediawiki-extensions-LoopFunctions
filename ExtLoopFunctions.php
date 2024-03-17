@@ -39,7 +39,7 @@ class ExtLoopFunctions {
 		$text = isset( $args[1] ) ? trim( $frame->expand( $args[1] ) ) : '';
 		$param = isset( $args[2] ) ? trim( $frame->expand( $args[2] ) ) : '$n$';
 		$variables = $frame->namedArgs + $frame->numberedArgs;
-		list( $prefix , $suffix ) = $param == '' ? [ $mask , '' ] : explode( $param, $mask, 2 );
+		[ $prefix, $suffix ] = $param == '' ? [ $mask, '' ] : explode( $param, $mask, 2 );
 		$return = '';
 
 		for ( $i = 0; array_key_exists( $prefix . ( $i + 1 ) . $suffix, $variables ); ++$i ) {
