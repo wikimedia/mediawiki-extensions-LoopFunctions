@@ -2,9 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"TheEduGobi"
 		]
 	},
-	"loopfunc-desc": "Fornece funcionalidade limitada de criação de ciclos no texto wiki",
+	"loopfunc-desc": "Fornece funcionalidade limitada de criação de ciclos (loops) no wikitexto",
 	"loopfunc_max_loops": "Foi atingido o número máximo de ciclos permitido"
 }
