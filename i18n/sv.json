@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stefan2255"
+		]
+	},
+	"loopfunc-desc": "Ger begränsad loopfunktionalitet i wikitexten",
+	"loopfunc_max_loops": "Maximalt antal tillåtna loopar nått"
+}
