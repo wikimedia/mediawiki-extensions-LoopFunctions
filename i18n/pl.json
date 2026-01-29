@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Woytecr"
+		]
+	},
+	"loopfunc-desc": "Zapewnia ograniczoną funkcjonalność pętli w wikikodzie",
+	"loopfunc_max_loops": "Osiągnięto maksymalną liczbę dozwolonych pętli"
+}
