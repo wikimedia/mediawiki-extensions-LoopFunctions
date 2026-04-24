@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
+	"loopfunc-desc": "위키텍스트에서 제한적인 루프 기능을 제공합니다",
 	"loopfunc_max_loops": "허용되는 최대 루프 수에 도달했습니다"
 }
