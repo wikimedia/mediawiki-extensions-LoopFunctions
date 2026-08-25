@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"loopfunc-desc": "Poskytuje obmedzenú funkcionalitu cyklov vo wikitexte",
+	"loopfunc_max_loops": "Dosiahol sa maximálny povolený počet cyklov"
+}
